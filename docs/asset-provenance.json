@@ -1,0 +1,1322 @@
+[
+  {
+    "asset": "assets/results/bonsai-inpainted-1.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 7,
+    "bbox": [
+      32.25440979003906,
+      2.5735092163085938,
+      121.85440826416016,
+      52.9735107421875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-inpainted-2.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 8,
+    "bbox": [
+      122.66690063476562,
+      2.5735092163085938,
+      212.26690673828125,
+      52.9735107421875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-inpainted-3.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 9,
+    "bbox": [
+      213.07940673828125,
+      2.5735092163085938,
+      302.6794128417969,
+      52.9735107421875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-inpainted-4.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 10,
+    "bbox": [
+      303.49200439453125,
+      2.5735092163085938,
+      393.0920104980469,
+      52.9735107421875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-inpainted-5.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 11,
+    "bbox": [
+      393.9043884277344,
+      2.5735092163085938,
+      483.50439453125,
+      52.9735107421875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-original-1.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 34,
+    "bbox": [
+      32.25416946411133,
+      53.80799102783203,
+      121.85417175292969,
+      104.20799255371094
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-original-2.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 35,
+    "bbox": [
+      122.6666030883789,
+      53.80799102783203,
+      212.2666015625,
+      104.20799255371094
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-original-3.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 36,
+    "bbox": [
+      213.0791015625,
+      53.80799102783203,
+      302.6791076660156,
+      104.20799255371094
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-original-4.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 37,
+    "bbox": [
+      303.4914855957031,
+      53.80799102783203,
+      393.09149169921875,
+      104.20799255371094
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-original-5.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 38,
+    "bbox": [
+      393.9039001464844,
+      53.80799102783203,
+      483.50390625,
+      104.20799255371094
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-genfusion-1.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 19,
+    "bbox": [
+      32.25471878051758,
+      104.9905014038086,
+      121.85472106933594,
+      155.3905029296875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-genfusion-2.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 20,
+    "bbox": [
+      122.66719818115234,
+      104.9905014038086,
+      212.26719665527344,
+      155.3905029296875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-genfusion-3.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 21,
+    "bbox": [
+      213.07980346679688,
+      104.9905014038086,
+      302.6798095703125,
+      155.3905029296875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-genfusion-4.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 22,
+    "bbox": [
+      303.4923095703125,
+      104.9905014038086,
+      393.0923156738281,
+      155.3905029296875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-genfusion-5.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 23,
+    "bbox": [
+      393.9046936035156,
+      104.9905014038086,
+      483.50469970703125,
+      155.3905029296875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-fsgs-1.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 14,
+    "bbox": [
+      32.25440979003906,
+      155.90350341796875,
+      121.85440826416016,
+      206.30349731445312
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-fsgs-2.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 15,
+    "bbox": [
+      122.66690063476562,
+      155.90350341796875,
+      212.26690673828125,
+      206.30349731445312
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-fsgs-3.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 16,
+    "bbox": [
+      213.07940673828125,
+      155.90350341796875,
+      302.6794128417969,
+      206.30349731445312
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-fsgs-4.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 17,
+    "bbox": [
+      303.49200439453125,
+      155.90350341796875,
+      393.0920104980469,
+      206.30349731445312
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-fsgs-5.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 18,
+    "bbox": [
+      393.9043884277344,
+      155.90350341796875,
+      483.50439453125,
+      206.30349731445312
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-guidedvd-1.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 24,
+    "bbox": [
+      32.25495910644531,
+      207.2410888671875,
+      121.8549575805664,
+      257.6410827636719
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-guidedvd-2.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 25,
+    "bbox": [
+      122.6675033569336,
+      207.2410888671875,
+      212.2675018310547,
+      257.6410827636719
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-guidedvd-3.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 26,
+    "bbox": [
+      213.0800018310547,
+      207.2410888671875,
+      302.67999267578125,
+      257.6410827636719
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-guidedvd-4.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 27,
+    "bbox": [
+      303.49249267578125,
+      207.2410888671875,
+      393.0924987792969,
+      257.6410827636719
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-guidedvd-5.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 28,
+    "bbox": [
+      393.9049072265625,
+      207.2410888671875,
+      483.5049133300781,
+      257.6410827636719
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-ours-1.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 29,
+    "bbox": [
+      32.2546501159668,
+      257.76904296875,
+      121.85464477539062,
+      308.1690368652344
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-ours-2.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 30,
+    "bbox": [
+      122.66719818115234,
+      257.76904296875,
+      212.26719665527344,
+      308.1690368652344
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-ours-3.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 31,
+    "bbox": [
+      213.07969665527344,
+      257.76904296875,
+      302.6796875,
+      308.1690368652344
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-ours-4.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 32,
+    "bbox": [
+      303.4921875,
+      257.76904296875,
+      393.0921936035156,
+      308.1690368652344
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/bonsai-ours-5.jpg",
+    "source": "_bonsai.pdf",
+    "page": 1,
+    "xref": 33,
+    "bbox": [
+      393.90460205078125,
+      257.76904296875,
+      483.5046081542969,
+      308.1690368652344
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-inpainted-1.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 56,
+    "bbox": [
+      35.193538665771484,
+      1.5630226135253906,
+      124.89433288574219,
+      52.01971435546875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-inpainted-2.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 57,
+    "bbox": [
+      125.87129974365234,
+      1.5665931701660156,
+      215.57208251953125,
+      52.023284912109375
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-inpainted-3.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 58,
+    "bbox": [
+      216.0615997314453,
+      1.6163063049316406,
+      305.76239013671875,
+      52.072998046875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-inpainted-4.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 59,
+    "bbox": [
+      306.4991149902344,
+      1.6116981506347656,
+      396.19989013671875,
+      52.068389892578125
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-original-1.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 52,
+    "bbox": [
+      35.6180305480957,
+      52.429203033447266,
+      125.31881713867188,
+      102.88589477539062
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-original-2.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 53,
+    "bbox": [
+      125.76909637451172,
+      52.517215728759766,
+      215.46987915039062,
+      102.97390747070312
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-original-3.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 54,
+    "bbox": [
+      216.11199951171875,
+      52.47391128540039,
+      305.81280517578125,
+      102.93060302734375
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-original-4.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 55,
+    "bbox": [
+      306.4991149902344,
+      52.52231216430664,
+      396.19989013671875,
+      102.97900390625
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-genfusion-1.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 32,
+    "bbox": [
+      35.33747863769531,
+      103.52830505371094,
+      125.03826904296875,
+      153.98500061035156
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-genfusion-2.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 33,
+    "bbox": [
+      125.78009796142578,
+      103.69869995117188,
+      215.48089599609375,
+      154.1553955078125
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-genfusion-3.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 34,
+    "bbox": [
+      216.11199951171875,
+      103.52940368652344,
+      305.81280517578125,
+      153.98609924316406
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-genfusion-4.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 35,
+    "bbox": [
+      306.70880126953125,
+      103.52830505371094,
+      396.40960693359375,
+      153.98500061035156
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-fsgs-1.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 36,
+    "bbox": [
+      35.441810607910156,
+      154.65350341796875,
+      125.1426010131836,
+      205.11019897460938
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-fsgs-2.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 37,
+    "bbox": [
+      125.69979858398438,
+      154.61441040039062,
+      215.4005889892578,
+      205.07110595703125
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-fsgs-3.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 38,
+    "bbox": [
+      216.22569274902344,
+      154.65350341796875,
+      305.9264831542969,
+      205.11019897460938
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-fsgs-4.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 39,
+    "bbox": [
+      306.8434143066406,
+      154.65350341796875,
+      396.544189453125,
+      205.11019897460938
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-difix-1.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 40,
+    "bbox": [
+      35.62984085083008,
+      205.41421508789062,
+      125.33062744140625,
+      255.87091064453125
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-difix-2.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 41,
+    "bbox": [
+      125.8843994140625,
+      205.41421508789062,
+      215.58518981933594,
+      255.87091064453125
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-difix-3.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 42,
+    "bbox": [
+      216.2716064453125,
+      205.49591064453125,
+      305.972412109375,
+      255.95260620117188
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-difix-4.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 43,
+    "bbox": [
+      307.2445983886719,
+      205.41421508789062,
+      396.94537353515625,
+      255.87091064453125
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-guidedvd-1.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 44,
+    "bbox": [
+      35.6180305480957,
+      256.6605224609375,
+      125.31881713867188,
+      307.1172180175781
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-guidedvd-2.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 45,
+    "bbox": [
+      125.79570007324219,
+      256.6605224609375,
+      215.49649047851562,
+      307.1172180175781
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-guidedvd-3.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 46,
+    "bbox": [
+      216.2716064453125,
+      256.7124328613281,
+      305.972412109375,
+      307.16912841796875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-guidedvd-4.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 47,
+    "bbox": [
+      306.7843017578125,
+      256.6605224609375,
+      396.485107421875,
+      307.1172180175781
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-ours-1.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 48,
+    "bbox": [
+      35.270870208740234,
+      308.1003723144531,
+      124.97166442871094,
+      358.55706787109375
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-ours-2.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 49,
+    "bbox": [
+      125.99310302734375,
+      308.1003723144531,
+      215.6938934326172,
+      358.55706787109375
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-ours-3.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 50,
+    "bbox": [
+      216.12159729003906,
+      308.1003723144531,
+      305.8223876953125,
+      358.55706787109375
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/garden-ours-4.jpg",
+    "source": "_garden.pdf",
+    "page": 1,
+    "xref": 51,
+    "bbox": [
+      306.7677917480469,
+      308.1603698730469,
+      396.46856689453125,
+      358.6170654296875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-original-1.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 8,
+    "bbox": [
+      9.640708923339844,
+      1.310394287109375,
+      88.16038513183594,
+      46.09779357910156
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-original-2.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 9,
+    "bbox": [
+      88.68463897705078,
+      1.310394287109375,
+      167.20431518554688,
+      46.09779357910156
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-original-3.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 7,
+    "bbox": [
+      168.25289916992188,
+      1.310394287109375,
+      246.7725830078125,
+      46.09779357910156
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-original-4.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 13,
+    "bbox": [
+      247.12210083007812,
+      1.310394287109375,
+      325.64178466796875,
+      46.09779357910156
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-gt-1.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 11,
+    "bbox": [
+      9.640708923339844,
+      46.8612060546875,
+      88.16038513183594,
+      91.64860534667969
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-gt-2.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 12,
+    "bbox": [
+      88.68463897705078,
+      46.8612060546875,
+      167.20431518554688,
+      91.64860534667969
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-gt-3.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 10,
+    "bbox": [
+      168.25289916992188,
+      46.8612060546875,
+      246.7725830078125,
+      91.64860534667969
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-gt-4.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 14,
+    "bbox": [
+      247.12210083007812,
+      46.8612060546875,
+      325.64178466796875,
+      91.64860534667969
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-guidedvd-1.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 18,
+    "bbox": [
+      9.640708923339844,
+      92.41200256347656,
+      88.16038513183594,
+      137.19940185546875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-guidedvd-2.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 19,
+    "bbox": [
+      88.68463897705078,
+      92.41200256347656,
+      167.20431518554688,
+      137.19940185546875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-guidedvd-3.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 17,
+    "bbox": [
+      168.25289916992188,
+      92.41200256347656,
+      246.7725830078125,
+      137.19940185546875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-guidedvd-4.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 20,
+    "bbox": [
+      247.12210083007812,
+      92.41200256347656,
+      325.64178466796875,
+      137.19940185546875
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-difix-1.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 22,
+    "bbox": [
+      9.640708923339844,
+      137.96275329589844,
+      88.16038513183594,
+      182.75015258789062
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-difix-2.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 23,
+    "bbox": [
+      88.68463897705078,
+      137.96275329589844,
+      167.20431518554688,
+      182.75015258789062
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-difix-3.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 21,
+    "bbox": [
+      168.25289916992188,
+      137.96275329589844,
+      246.7725830078125,
+      182.75015258789062
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-difix-4.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 24,
+    "bbox": [
+      247.12210083007812,
+      137.96275329589844,
+      325.64178466796875,
+      182.75015258789062
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-genfusion-1.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 28,
+    "bbox": [
+      9.640708923339844,
+      183.5657501220703,
+      88.16038513183594,
+      228.3531494140625
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-genfusion-2.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 29,
+    "bbox": [
+      88.68463897705078,
+      183.5657501220703,
+      167.20431518554688,
+      228.3531494140625
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-genfusion-3.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 26,
+    "bbox": [
+      168.25289916992188,
+      183.29283142089844,
+      246.7725830078125,
+      228.08023071289062
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-genfusion-4.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 31,
+    "bbox": [
+      247.2967987060547,
+      183.29283142089844,
+      325.81646728515625,
+      228.08023071289062
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-ours-1.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 27,
+    "bbox": [
+      9.640708923339844,
+      229.1687469482422,
+      88.16038513183594,
+      273.9561462402344
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-ours-2.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 30,
+    "bbox": [
+      88.68463897705078,
+      229.1687469482422,
+      167.20431518554688,
+      273.9561462402344
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-ours-3.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 25,
+    "bbox": [
+      168.25289916992188,
+      228.98268127441406,
+      246.7725830078125,
+      273.77008056640625
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/scannet-ours-4.jpg",
+    "source": "_scannetpp_single_column.pdf",
+    "page": 1,
+    "xref": 32,
+    "bbox": [
+      247.2967987060547,
+      228.98268127441406,
+      325.81646728515625,
+      273.77008056640625
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/teaser-garden-original.jpg",
+    "source": "_teaser.pdf",
+    "page": 1,
+    "xref": 7,
+    "bbox": [
+      182.9394073486328,
+      19.574512481689453,
+      258.52996826171875,
+      62.09419250488281
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/teaser-garden-ours.jpg",
+    "source": "_teaser.pdf",
+    "page": 1,
+    "xref": 8,
+    "bbox": [
+      182.9394073486328,
+      64.11311340332031,
+      258.52996826171875,
+      106.63279724121094
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/teaser-bonsai-ours.jpg",
+    "source": "_teaser.pdf",
+    "page": 1,
+    "xref": 9,
+    "bbox": [
+      0.7210236191749573,
+      114.123779296875,
+      173.57151794433594,
+      211.3521270751953
+    ],
+    "width": 960,
+    "height": 540,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/teaser-bonsai-original.jpg",
+    "source": "_teaser.pdf",
+    "page": 1,
+    "xref": 10,
+    "bbox": [
+      0.720078706741333,
+      0.9278793334960938,
+      173.51988220214844,
+      98.12779998779297
+    ],
+    "width": 960,
+    "height": 540,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/teaser-indoor-ours.jpg",
+    "source": "_teaser.pdf",
+    "page": 1,
+    "xref": 11,
+    "bbox": [
+      182.8892059326172,
+      160.95101928710938,
+      258.4798278808594,
+      203.470703125
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  },
+  {
+    "asset": "assets/results/teaser-indoor-original.jpg",
+    "source": "_teaser.pdf",
+    "page": 1,
+    "xref": 12,
+    "bbox": [
+      182.8892059326172,
+      116.5714111328125,
+      258.4798278808594,
+      159.09109497070312
+    ],
+    "width": 480,
+    "height": 270,
+    "operation": "Original embedded JPEG; no re-encoding or retouching"
+  }
+]

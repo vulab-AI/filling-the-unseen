@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d5745">
+  <title>Filling the Unseen · ACM MM 2026</title>
+  <meta name="description" content="Filling the Unseen: Scene Extrapolation via 3D Gaussian Splatting. A hierarchical framework for expanding 3D scenes, with Quality-Aware Masks that preserve reconstructed detail. ACM Multimedia 2026.">
+  <link rel="canonical" href="https://vulab-ai.github.io/filling-the-unseen/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Filling the Unseen · ACM MM 2026">
+  <meta property="og:description" content="Scene Extrapolation via 3D Gaussian Splatting. Expand beyond observed views while preserving the scene you already know.">
+  <meta property="og:url" content="https://vulab-ai.github.io/filling-the-unseen/">
+  <meta property="og:image" content="https://vulab-ai.github.io/filling-the-unseen/assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_title" content="Filling the Unseen: Scene Extrapolation via 3D Gaussian Splatting">
+  <meta name="citation_author" content="Yunlai Zhou">
+  <meta name="citation_author" content="Yiren Lu">
+  <meta name="citation_author" content="Tuo Liang">
+  <meta name="citation_author" content="Disheng Liu">
+  <meta name="citation_author" content="Vipin Chaudhary">
+  <meta name="citation_author" content="Yu Yin">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Proceedings of the 34th ACM International Conference on Multimedia">
+  <meta name="citation_doi" content="10.1145/3767308.3835425">
+  <meta name="citation_pdf_url" content="https://vulab-ai.github.io/filling-the-unseen/assets/paper/filling-the-unseen.pdf">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/results/teaser-bonsai-ours.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#"><img src="assets/favicon.svg" width="28" height="28" alt=""><span>Filling the Unseen</span></a>
+      <div class="nav-links"><a href="#overview">Overview</a><a href="#results">Results</a><a href="#method">Method</a><a href="#citation">Citation</a></div>
+      <a class="nav-paper" href="assets/paper/filling-the-unseen.pdf" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="paper-title">
+      <p class="venue"><span class="venue-dot" aria-hidden="true"></span> ACM MULTIMEDIA 2026 <span class="venue-separator">/</span> RIO DE JANEIRO</p>
+      <h1 id="paper-title">Filling the <span>Unseen</span></h1>
+      <p class="paper-subtitle">Scene Extrapolation via 3D Gaussian Splatting</p>
+      <div class="authors" aria-label="Authors">
+        <a href="https://github.com/Allen-Zhou729">Yunlai Zhou</a>
+        <a href="https://yiren-lu.com/">Yiren Lu</a>
+        <a href="https://tuo-liang.github.io/">Tuo Liang</a>
+        <a href="https://scholar.google.com/citations?user=xlIBwREAAAAJ&amp;hl=en">Disheng Liu</a>
+        <span>Vipin Chaudhary</span>
+        <a href="https://yin-yu.github.io/">Yu Yin<sup title="Corresponding author">†</sup></a>
+      </div>
+      <p class="affiliation">Case Western Reserve University</p>
+      <p class="corresponding">† Corresponding author</p>
+      <div class="publication-links">
+        <a class="button button-dark" data-resource="paper" href="assets/paper/filling-the-unseen.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Zm0 0v6h6M8 13h8M8 17h5"/></svg>Paper</a>
+        <a class="button button-dark" href="#video"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></svg>Video</a>
+        <a class="button button-outline" href="#results">Explore results <span aria-hidden="true">↗</span></a>
+        <a class="button button-dark" data-resource="arxiv" hidden>arXiv</a>
+        <a class="button button-dark" data-resource="code" hidden>Code</a>
+      </div>
+    </section>
+
+    <section class="teaser container" aria-labelledby="teaser-heading">
+      <div class="figure-topline"><h2 id="teaser-heading">Beyond the observed scene.</h2><span class="interaction-hint">Drag to reveal <span aria-hidden="true">↔</span></span></div>
+      <div class="compare hero-compare" data-compare style="--split: 48%">
+        <img class="compare-after" id="hero-after" src="assets/results/teaser-bonsai-ours.jpg" width="960" height="540" alt="Our completed Bonsai scene, with the missing upper wall reconstructed and the tripod refined." fetchpriority="high">
+        <img class="compare-before" id="hero-before" src="assets/results/teaser-bonsai-original.jpg" width="960" height="540" alt="Original 3DGS rendering of Bonsai, with missing geometry above the training views.">
+        <span class="compare-label before-label">Original 3DGS</span><span class="compare-label after-label">Filling the Unseen <span aria-hidden="true">✦</span></span>
+        <div class="compare-divider" aria-hidden="true"><span>‹<i></i>›</span></div>
+        <input class="compare-range" type="range" min="0" max="100" value="48" aria-label="Compare original 3DGS with Filling the Unseen" aria-valuetext="48% original 3DGS, 52% Filling the Unseen">
+      </div>
+      <div class="teaser-bottom">
+        <p>Expand into unobserved regions.<br><strong>Preserve the details already there.</strong></p>
+        <div class="scene-pills" aria-label="Teaser scene">
+          <button type="button" data-hero="bonsai" aria-pressed="true"><img src="assets/results/teaser-bonsai-ours.jpg" alt="" width="48" height="32">Bonsai</button>
+          <button type="button" data-hero="garden" aria-pressed="false"><img src="assets/results/teaser-garden-ours.jpg" alt="" width="48" height="32">Garden</button>
+          <button type="button" data-hero="indoor" aria-pressed="false"><img src="assets/results/teaser-indoor-ours.jpg" alt="" width="48" height="32">Indoor</button>
+        </div>
+      </div>
+      <p class="source-note">Actual renderings from the paper. Black regions indicate missing content in the original reconstruction.</p>
+    </section>
+
+    <section class="section section-tint" id="overview" aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="section-intro"><p class="eyebrow">THE IDEA</p><h2 id="overview-heading">A more complete world,<br>from an incomplete capture.</h2><p class="lead">Novel views reveal what reconstruction leaves behind. We expand a 3D scene beyond its observed boundaries, while improving the quality of what is already visible.</p></div>
+        <div class="contributions">
+          <article><span class="step-number">01</span><h3>Expand in parallel</h3><p>Detect independent camera views in 3D, then generate and reconstruct non-overlapping regions in a single pass.</p></article>
+          <article><span class="step-number">02</span><h3>Complete the gaps</h3><p>Fill the remaining regions between independent views with a second stage of residual completion.</p></article>
+          <article><span class="step-number">03</span><h3>Refine selectively</h3><p>Use Quality-Aware Masks to guide scene updates toward under-reconstructed areas and protect existing detail.</p></article>
+        </div>
+        <details class="abstract" open>
+          <summary>Abstract <span aria-hidden="true">+</span></summary>
+          <div class="abstract-text">
+            <p>3D Gaussian Splatting achieves photorealistic reconstruction within the training view distribution, yet degrades on out-of-distribution novel views, exhibiting holes in unobserved regions and artifacts in observable areas. Recent works formulate this task as extrapolation and interpolation and try to address it with generative models, but remain limited in extrapolation scale and quality. They repeat a generate–reconstruct–shift cycle to progressively build a scene, which introduces accumulated errors with every step conditioning on previous outcomes.</p>
+            <p>In this work, we propose a holistic framework for extrapolation and interpolation. We devise an independent camera view detection mechanism to enable parallel, conflict-free extrapolation, circumventing reliance on the aforementioned error-prone cycle. Building upon this, we design a hierarchical pipeline that extrapolates independent and dependent camera views separately. Additionally, previous methods overlook inconsistency between generated and original images, compromising well-reconstructed areas. We propose a plug-and-play <strong>Quality-Aware Mask (QA-Mask)</strong> module, enabling selective utilization of generated data. By calibrating learning weights with pixel-wise rendering quality, it prevents generation-induced degradation in well-reconstructed areas. Extensive experiments demonstrate the superior performance of our framework, with QA-Mask generalizing across multiple generative reconstruction models.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section container" id="video" aria-labelledby="video-heading">
+      <div class="section-heading"><div><p class="eyebrow">SEE IT IN MOTION</p><h2 id="video-heading">Scene extrapolation results</h2></div><span class="meta-label">SUPPLEMENTARY VIDEO · 1080P</span></div>
+      <video id="supplementary-video" class="demo-video" controls playsinline preload="none" poster="assets/video/poster.jpg" width="1920" height="1080" aria-describedby="video-description">
+        <source src="assets/video/supplementary.mp4" type="video/mp4">
+        <p>Your browser does not support embedded video. <a href="assets/video/supplementary.mp4">Download the supplementary video.</a></p>
+      </video>
+      <div class="video-caption"><p id="video-description">Continuous camera trajectories on Mip-NeRF 360 and ScanNet++, with side-by-side baseline comparisons. The original supplementary video is silent; method names and additional render-time processing are labeled in the video.</p><a class="text-link" href="assets/video/supplementary.mp4" download>Download video <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="section section-tint" id="results" aria-labelledby="results-heading">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">QUALITATIVE COMPARISONS</p><h2 id="results-heading">A closer look at the unseen</h2></div><p>Choose a scene, a view, and a method.<br>Drag the divider to compare.</p></div>
+        <div class="result-scenes" aria-label="Comparison scene">
+          <button type="button" data-scene="bonsai" aria-pressed="true"><img src="assets/results/bonsai-ours-1.jpg" width="480" height="270" alt="" loading="lazy"><span>Bonsai<small>Mip-NeRF 360</small></span></button>
+          <button type="button" data-scene="garden" aria-pressed="false"><img src="assets/results/garden-ours-2.jpg" width="480" height="270" alt="" loading="lazy"><span>Garden<small>Mip-NeRF 360</small></span></button>
+          <button type="button" data-scene="workshop" aria-pressed="false"><img src="assets/results/scannet-ours-1.jpg" width="480" height="270" alt="" loading="lazy"><span>Workshop<small>ScanNet++</small></span></button>
+          <button type="button" data-scene="meeting" aria-pressed="false"><img src="assets/results/scannet-ours-3.jpg" width="480" height="270" alt="" loading="lazy"><span>Meeting room<small>ScanNet++</small></span></button>
+        </div>
+        <div class="result-controls">
+          <div class="method-control"><label for="baseline">Compare with</label><select id="baseline"><option value="genfusion">GenFusion</option><option value="original">Original 3DGS</option><option value="fsgs">Few-Shot GS</option><option value="guidedvd">Guidedvd-3dgs</option></select></div>
+          <div class="view-control"><span id="view-label">View</span><div id="view-buttons" aria-labelledby="view-label"></div></div>
+        </div>
+        <div class="compare result-compare" data-compare style="--split: 50%">
+          <img class="compare-after" id="result-after" src="assets/results/bonsai-ours-1.jpg" width="480" height="270" alt="Bonsai, view 1: Filling the Unseen." loading="lazy">
+          <img class="compare-before" id="result-before" src="assets/results/bonsai-genfusion-1.jpg" width="480" height="270" alt="Bonsai, view 1: GenFusion." loading="lazy">
+          <span class="compare-label before-label" id="result-before-label">GenFusion</span><span class="compare-label after-label">Ours <span aria-hidden="true">✦</span></span>
+          <div class="compare-divider" aria-hidden="true"><span>‹<i></i>›</span></div>
+          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Compare GenFusion with our method on Bonsai" aria-valuetext="50% baseline, 50% our method">
+        </div>
+        <div class="comparison-caption"><p id="result-caption" aria-live="polite">Bonsai · Mip-NeRF 360 · View 1</p><a id="full-comparison" class="text-link" href="assets/figures/bonsai-comparison.pdf" target="_blank" rel="noopener">Full comparison figure <span aria-hidden="true">↗</span></a></div>
+        <div class="method-strip" id="method-strip" aria-label="All available methods for this view"></div>
+        <p class="source-note">Images are extracted directly from the manuscript figures at their original resolution. Mip-NeRF 360 has no ground-truth images for these extrapolation views; ScanNet++ uses a controlled partial-scene reconstruction protocol.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="method" aria-labelledby="method-heading">
+      <div class="section-intro"><p class="eyebrow">HOW IT WORKS</p><h2 id="method-heading">Two stages. One coherent scene.</h2><p class="lead">A hierarchy of independent and dependent camera views reduces repeated generation cycles and the errors they accumulate.</p></div>
+      <figure class="paper-figure">
+        <a href="assets/figures/method-overview.pdf" class="zoomable" data-lightbox="assets/figures/method-overview.png" data-caption="The hierarchical two-stage pipeline and DIBR-based video depth alignment." aria-label="Enlarge the method overview"><img src="assets/figures/method-overview.png" width="2000" height="1029" alt="Pipeline: independently inpaint camera views and generate videos in stage one, propagate results with depth, then complete dependent views in stage two. Video depth alignment provides depth priors." loading="lazy"><span class="zoom-hint" aria-hidden="true">↗</span></a>
+        <figcaption>Independent views support parallel generation and reconstruction. Dependent views complete the remaining gaps. DIBR-based video depth alignment supplies geometry priors throughout the process.</figcaption>
+      </figure>
+      <div class="method-steps">
+        <article><p class="eyebrow">STAGE 01</p><h3>Parallel extrapolation</h3><p>Mesh-based frustum collision detection identifies views whose inpainted regions do not overlap. Each view is inpainted independently, then connected to original training views with generated videos.</p></article>
+        <article><p class="eyebrow">STAGE 02</p><h3>Residual completion</h3><p>Depth-based propagation carries the generated content to intermediate views. A second pass fills the remaining gaps and connects neighboring views along a closed trajectory.</p></article>
+        <article><p class="eyebrow">FINAL REFINEMENT</p><h3>Scene interpolation</h3><p>Reuse the videos generated during extrapolation and incorporate artifact-removal outputs to improve rendering within the original scene. QA-Mask guides where updates should happen.</p></article>
+      </div>
+      <details class="figure-details"><summary>How are independent camera views detected? <span aria-hidden="true">+</span></summary><div class="camera-detail"><img src="assets/figures/independent-cameras.png" width="2000" height="1516" alt="Mesh-based view frustums enclosing inpainted geometry. Non-colliding frustums identify independent views; colliding frustums identify dependent views." loading="lazy"><p>For each candidate view, inpainting and depth estimation define a probable depth range for the missing region. A mesh frustum encloses that region in 3D. Non-colliding frustums indicate independent camera views, enabling parallel generation without overlapping generated geometry.</p></div></details>
+    </section>
+
+    <section class="section section-tint" id="qa-mask" aria-labelledby="qa-heading">
+      <div class="container">
+        <div class="section-intro"><p class="eyebrow">QUALITY-AWARE MASK</p><h2 id="qa-heading">Know where to generate.<br>And where to preserve.</h2><p class="lead">Generated images can improve missing regions while unintentionally changing well-reconstructed ones. QA-Mask makes scene updates selective.</p></div>
+        <figure class="paper-figure"><a class="zoomable" href="assets/figures/qa-mask-pipeline.pdf" data-lightbox="assets/figures/qa-mask-pipeline.png" data-caption="QA-Mask models directional supervision with spherical harmonics." aria-label="Enlarge the QA-Mask pipeline"><img src="assets/figures/qa-mask-pipeline.png" width="2000" height="650" alt="QA-Mask initializes Gaussian base colors to red, trains only view-dependent spherical harmonic coefficients against black training images, and renders a mask that distinguishes supervised from under-supervised directions." loading="lazy"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>Spherical harmonics model which viewing directions have been supervised. The rendered mask spatially reweights the reconstruction loss so that generated data contributes where it is needed.</figcaption></figure>
+        <div class="qa-grid"><div class="qa-copy"><span class="module-tag">PLUG-AND-PLAY MODULE</span><h3>Better preservation.<br>Across different models.</h3><p>QA-Mask improves the quality of existing regions when integrated into both GenFusion and DiFix3D+, while retaining comparable extrapolation performance.</p><div class="qa-stat"><span>GenFusion <small>existing-region PSNR</small></span><strong>26.49 <span aria-hidden="true">→</span> 28.33 <small>dB</small></strong></div><div class="qa-stat"><span>DiFix3D+ <small>existing-region PSNR</small></span><strong>28.11 <span aria-hidden="true">→</span> 28.58 <small>dB</small></strong></div><p class="source-note">ScanNet++ results from the paper. Arrows show baseline → baseline with QA-Mask.</p></div><figure class="paper-figure qa-example"><a class="zoomable" href="assets/figures/qa-mask-generalization.pdf" data-lightbox="assets/figures/qa-mask-generalization.png" data-caption="GenFusion and DiFix3D+ results, without QA-Mask (left) and with QA-Mask (right)." aria-label="Enlarge the QA-Mask results"><img src="assets/figures/qa-mask-generalization.png" width="2000" height="1853" alt="GenFusion and DiFix3D+ results without QA-Mask on the left and with QA-Mask on the right. The mask preserves desks, cabinets, edges, and small details." loading="lazy"><span class="zoom-hint" aria-hidden="true">↗</span></a></figure></div>
+      </div>
+    </section>
+
+    <section class="section container" id="evaluation" aria-labelledby="evaluation-heading">
+      <div class="section-heading"><div><p class="eyebrow">QUANTITATIVE EVALUATION</p><h2 id="evaluation-heading">Measured across two benchmarks</h2></div><p>Perceptual quality, consistency,<br>and reconstruction fidelity.</p></div>
+      <div class="metrics-tabs" role="tablist" aria-label="Evaluation dataset"><button id="tab-scannet" type="button" role="tab" aria-selected="true" aria-controls="metrics-scannet" tabindex="0">ScanNet++ <span>10 scenes</span></button><button id="tab-mipnerf" type="button" role="tab" aria-selected="false" aria-controls="metrics-mipnerf" tabindex="-1">Mip-NeRF 360 <span>4 scenes</span></button></div>
+      <div id="metrics-scannet" role="tabpanel" aria-labelledby="tab-scannet" tabindex="0">
+        <div class="table-scroll"><table><caption>Reference metrics averaged across 10 ScanNet++ scenes. Best values are highlighted.</caption><thead><tr><th scope="col">Method</th><th scope="col">PSNR ↑</th><th scope="col">SSIM ↑</th><th scope="col">LPIPS ↓</th></tr></thead><tbody><tr><th scope="row">Few-Shot GS</th><td>18.92</td><td>0.80</td><td>0.3438</td></tr><tr><th scope="row">DiFix3D+</th><td>20.93</td><td>0.84</td><td>0.2554</td></tr><tr><th scope="row">GenFusion</th><td>21.93</td><td>0.85</td><td>0.2502</td></tr><tr><th scope="row">Guidedvd-3dgs</th><td>22.10</td><td>0.84</td><td>0.2662</td></tr><tr class="ours-row"><th scope="row">Filling the Unseen <span>Ours</span></th><td><strong>23.79</strong></td><td><strong>0.88</strong></td><td><strong>0.2300</strong></td></tr></tbody></table></div>
+        <p class="evaluation-note">Controlled evaluation: reconstruct half of each scene and extrapolate into the held-out half. Original images provide ground truth; all methods use ground-truth images as inpainting targets in this setting.</p>
+      </div>
+      <div id="metrics-mipnerf" role="tabpanel" aria-labelledby="tab-mipnerf" tabindex="0" hidden>
+        <div class="table-scroll"><table><caption>Non-reference metrics on Mip-NeRF 360: Bonsai, Counter, Garden, and Kitchen.</caption><thead><tr><th scope="col">Method</th><th scope="col">CLIP-IQA ↑</th><th scope="col">QualiCLIP ↑</th><th scope="col">MVC ↑</th><th scope="col">SemSim ↑</th><th scope="col">Time</th></tr></thead><tbody><tr><th scope="row">Few-Shot GS</th><td>0.278</td><td>0.352</td><td>1792</td><td>0.707</td><td>24 min</td></tr><tr><th scope="row">DiFix3D+</th><td>0.354</td><td>0.451</td><td>1755</td><td>0.687</td><td>53 min</td></tr><tr><th scope="row">GenFusion</th><td>0.340</td><td>0.378</td><td>1157</td><td>0.712</td><td>44 min</td></tr><tr><th scope="row">Guidedvd-3dgs</th><td>0.230</td><td>0.298</td><td>1845</td><td>0.691</td><td>306 min</td></tr><tr class="ours-row"><th scope="row">Filling the Unseen <span>Ours</span></th><td><strong>0.404</strong></td><td><strong>0.498</strong></td><td><strong>1972</strong></td><td><strong>0.737</strong></td><td>77 min</td></tr></tbody></table></div>
+        <p class="evaluation-note">No ground-truth images exist for these extrapolation views. CLIP-IQA and QualiCLIP assess perceptual quality; MVC measures matching-based multi-view consistency; SemSim measures CLIP semantic similarity. Baselines receive the same inpainted independent views. Runtime is measured on an NVIDIA RTX A6000.</p>
+      </div>
+      <p class="source-note">↑ Higher is better. ↓ Lower is better. Runtime for our method includes both extrapolation stages, interpolation, and QA-Mask training.</p>
+    </section>
+
+    <section class="section section-tint" id="citation" aria-labelledby="citation-heading">
+      <div class="container citation-container"><div class="section-heading"><div><p class="eyebrow">BIBTEX</p><h2 id="citation-heading">Citation</h2></div><button type="button" id="copy-citation" class="button button-outline">Copy BibTeX <span aria-hidden="true">⧉</span></button></div><p>If you find this work useful for your research, please consider citing:</p>
+        <pre><code id="bibtex">@inproceedings{zhou2026filling,
+  title     = {Filling the Unseen: Scene Extrapolation via
+               3D Gaussian Splatting},
+  author    = {Zhou, Yunlai and Lu, Yiren and Liang, Tuo and
+               Liu, Disheng and Chaudhary, Vipin and Yin, Yu},
+  booktitle = {Proceedings of the 34th ACM International
+               Conference on Multimedia},
+  series    = {MM '26},
+  year      = {2026},
+  doi       = {10.1145/3767308.3835425}
+}</code></pre><p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer container"><div><a class="brand" href="#"><img src="assets/favicon.svg" width="25" height="25" alt=""><span>Filling the Unseen</span></a><p>Case Western Reserve University · ACM MM 2026</p></div><p>Page design inspired by <a href="https://yiren-lu.com/project_pages/view-consistent_object_removal_in_radiance_fields/">View-consistent Object Removal</a>.<br><a data-site-source href="https://github.com/vulab-AI/filling-the-unseen">Website source</a> · Paper and figures: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p></footer>
+  <dialog id="figure-dialog" aria-labelledby="dialog-caption"><button type="button" class="dialog-close" aria-label="Close enlarged figure">×</button><img id="dialog-image" alt=""><p id="dialog-caption"></p><a id="dialog-pdf" class="text-link" target="_blank" rel="noopener">Open original PDF ↗</a></dialog>
+  <noscript><style>.compare-before,.compare-label,.compare-divider,.compare-range,.scene-pills,.result-scenes,.result-controls,.method-strip,.metrics-tabs,#copy-citation{display:none!important}#metrics-mipnerf[hidden]{display:block!important}</style></noscript>
+</body>
+</html>

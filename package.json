@@ -1,0 +1,21 @@
+{
+  "name": "filling-the-unseen-project-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Research project page for Filling the Unseen: Scene Extrapolation via 3D Gaussian Splatting",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "test": "node scripts/check.mjs",
+    "test:browser": "node scripts/browser-check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0"
+  }
+}

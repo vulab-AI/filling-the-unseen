@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.paper-source/
+.work/
+.tools/
+*.zip
+/*.mp4
+*.log
+.DS_Store
