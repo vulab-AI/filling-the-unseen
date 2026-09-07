@@ -3,6 +3,6 @@ window.SITE_CONFIG = {
   url: 'https://vulab-ai.github.io/filling-the-unseen/',
   paper: 'assets/paper/filling-the-unseen.pdf',
   arxiv: '',
-  code: '',
+  code: 'https://github.com/vulab-AI/filling-the-unseen-code',
   repository: 'https://github.com/vulab-AI/filling-the-unseen',
 };

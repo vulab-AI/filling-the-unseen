@@ -1,4 +1,5 @@
 node_modules/
+/code/
 dist/
 .paper-source/
 .work/

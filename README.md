@@ -6,7 +6,7 @@
 
 作者：Yunlai Zhou, Yiren Lu, Tuo Liang, Disheng Liu, Vipin Chaudhary, Yu Yin。单位：Case Western Reserve University。
 
-这是项目**网站源码**。论文算法的研究代码尚未在此仓库发布。
+这是项目**网站源码**。独立的 [Code 仓库](https://github.com/vulab-AI/filling-the-unseen-code) 当前标记为 **Work in progress**，以用户指定的 `graphdeco-inria/gaussian-splatting` 为基础；论文方法的实现正在准备中。本机代码仓库位于 `code/`，独立管理，不提交到网站仓库或 Pages 部署目录。
 
 ## 本地预览
 
@@ -47,7 +47,7 @@ npm run test:browser # 另一个终端中运行
 | `assets/paper/filling-the-unseen.pdf` | 从用户提供的 arXiv 源文件编译的论文 |
 | `assets/video/supplementary.mp4` | 投稿补充视频，开启 MP4 fast-start |
 
-有 arXiv 页面或研究代码仓库后，填写 `site-config.js` 对应字段即可显示按钮；留空则隐藏。不把网站源码仓库冒充研究代码。更改论文下载路径时也请同步 `index.html` 中的静态 Paper 链接及 `citation_pdf_url`，以便无 JavaScript 场景和搜索引擎正常访问。
+`site-config.js` 管理 Paper、arXiv 和 Code 地址；留空的可选资源不显示按钮。Code 当前指向独立的 Work in progress 仓库。修改资源地址时请同时更新 `index.html` 中已有的静态链接；论文 PDF 还需同步 `citation_pdf_url`，以便无 JavaScript 场景和搜索引擎正常访问。
 
 如需更改网站域名，修改 `index.html` 的 canonical、Open Graph、`citation_pdf_url` 和 `site-config.js` 的 URL；`npm run build` 会据此更新 sitemap。
 
