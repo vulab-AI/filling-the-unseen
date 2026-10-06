@@ -21,7 +21,7 @@ async function checkSimplifiedLayout(target) {
   assert.equal((await target.locator('.venue').innerText()).trim(), 'ACM MULTIMEDIA 2026');
   const venueSize = await target.locator('.venue').evaluate(element => parseFloat(getComputedStyle(element).fontSize));
   assert(venueSize >= 16, `Conference name too small: ${venueSize}px`);
-  assert.equal(await target.locator('#supplementary-video, #video, #overview-heading').count(), 0);
+  assert.equal(await target.locator('#supplementary-video, #video, #overview-heading, #results, .result-compare, .clip-scene-caption, .clip-card figcaption, #clip-note, #scene-videos a[download]').count(), 0);
   assert(await target.locator('.idea-statement').evaluate(element => parseFloat(getComputedStyle(element).fontSize) >= 21));
   assert.equal(await target.locator('#overview .step-number').count(), 3);
   assert(await target.evaluate(() => document.querySelector('.hero').compareDocumentPosition(document.querySelector('#scene-videos')) & Node.DOCUMENT_POSITION_FOLLOWING));
@@ -53,7 +53,6 @@ try {
       await waitForClips();
       assert.equal(await page.locator('#clip-baseline-video').getAttribute('src'), scene.clips[method].src);
       assert.equal(await page.locator('#clip-ours-video').getAttribute('src'), scene.clips.ours.src);
-      assert.equal(await page.locator('#clip-baseline-download').getAttribute('href'), scene.clips[method].src);
       await page.locator('#clip-play').click();
       await page.waitForFunction(() => [...document.querySelectorAll('.clip-video')].every(video => video.currentTime > .15 && !video.paused));
       await page.locator('#clip-play').click();
@@ -95,34 +94,6 @@ try {
   await waitForClips();
   await page.locator('[data-resource="paper"]').hover();
   await checkSimplifiedLayout(page);
-  const slider = page.locator('.result-compare input');
-  await slider.focus();
-  await page.keyboard.press('Home');
-  assert.equal(await slider.inputValue(), '0');
-  await page.keyboard.press('End');
-  assert.equal(await slider.inputValue(), '100');
-  await page.keyboard.press('ArrowLeft');
-  assert.equal(await slider.inputValue(), '99');
-  await slider.fill('50');
-  for (const scene of ['garden', 'workshop', 'meeting', 'bonsai']) {
-    await page.locator(`[data-scene="${scene}"]`).click();
-    await page.waitForFunction(() => !document.querySelector('.result-compare').hasAttribute('aria-busy'));
-    const methods = await page.locator('#baseline option').evaluateAll(options => options.map(option => option.value));
-    assert.equal(methods.includes('gt'), ['workshop', 'meeting'].includes(scene));
-    for (const method of methods) {
-      await page.selectOption('#baseline', method);
-      await page.waitForFunction(() => !document.querySelector('.result-compare').hasAttribute('aria-busy'));
-      assert((await page.locator('#result-before').getAttribute('src')).includes(`-${method}-`));
-    }
-    const viewCount = await page.locator('#view-buttons button').count();
-    for (let i = 0; i < viewCount; i++) {
-      await page.locator('#view-buttons button').nth(i).click();
-      await page.waitForFunction(() => !document.querySelector('.result-compare').hasAttribute('aria-busy'));
-      assert((await page.locator('#result-caption').innerText()).endsWith(`View ${i + 1}`));
-    }
-  }
-  await page.selectOption('#baseline', 'genfusion');
-  await page.locator('#view-buttons button').first().click();
   await page.locator('#tab-mipnerf').click();
   assert(await page.locator('#metrics-mipnerf').isVisible());
   assert(!(await page.locator('#metrics-scannet').isVisible()));
@@ -130,6 +101,7 @@ try {
   assert(await page.locator('#metrics-scannet').isVisible());
   await page.locator('[data-lightbox]').first().click();
   assert(await page.locator('#figure-dialog').isVisible());
+  assert.equal(await page.locator('#dialog-caption').textContent(), await page.locator('#method-overview-caption').textContent());
   await page.keyboard.press('Escape');
   assert(!(await page.locator('#figure-dialog').isVisible()));
   await page.locator('#copy-citation').click();
@@ -170,14 +142,12 @@ try {
   await mobile.waitForFunction(() => [...document.querySelectorAll('.clip-video')].every(video => video.currentTime > .15));
   await mobile.locator('#clip-play').tap();
   await mobile.locator('#scene-videos').screenshot({ path: resolve(out, 'mobile-gallery.png') });
-  await mobile.locator('[data-scene="meeting"]').tap();
-  await mobile.waitForFunction(() => !document.querySelector('.result-compare').hasAttribute('aria-busy'));
-  const bounds = await mobile.locator('.result-compare').boundingBox();
-  await mobile.touchscreen.tap(bounds.x + bounds.width * .25, bounds.y + bounds.height * .5);
-  const mobileValue = Number(await mobile.locator('.result-compare input').inputValue());
-  assert(mobileValue > 15 && mobileValue < 35, `Touch slider did not move: ${mobileValue}`);
-  await mobile.screenshot({ path: resolve(out, 'mobile-results.png') });
+  const bounds = await mobile.locator('#clip-progress').boundingBox();
+  await mobile.touchscreen.tap(bounds.x + bounds.width * .5, bounds.y + bounds.height * .5);
+  await mobile.waitForFunction(() => [...document.querySelectorAll('.clip-video')].every(video => !video.seeking));
+  assert(await mobile.locator('.clip-video').evaluateAll(videos => videos.every(video => video.currentTime > 1.7 && video.currentTime < 2.3)));
+  await mobile.screenshot({ path: resolve(out, 'mobile-video-controls.png') });
   await mobileContext.close();
   assert.deepEqual(errors, []);
-  console.log('Passed: section order, enlarged idea, 22 presentation clips, shared playback/seeking, scene switching, mobile touch, black text, image comparisons, dialogs, clipboard, and accessibility.');
+  console.log('Passed: section order, enlarged idea, 22 presentation clips, shared playback/seeking, scene switching, mobile touch, black text, original method captions, dialogs, clipboard, and accessibility.');
 } finally { await browser.close(); }

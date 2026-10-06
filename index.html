@@ -63,13 +63,11 @@
       <div class="clip-pair">
         <figure class="clip-card">
           <div class="clip-card-heading"><h2 id="clip-baseline-heading">GenFusion</h2><div class="clip-select" id="clip-baseline-control" hidden><label class="sr-only" for="clip-baseline">Comparison method</label><select id="clip-baseline"><option value="genfusion">GenFusion</option><option value="guidedvd">Guidedvd-3dgs</option><option value="fsgs">FSGS</option><option value="difix">DiFix3D+</option></select></div></div>
-          <video id="clip-baseline-video" class="clip-video" src="assets/video/presentation/bonsai_genfusion.mp4" poster="assets/video/presentation/bonsai_genfusion.png" controls muted playsinline preload="none" width="960" height="540" aria-label="Bonsai: GenFusion" aria-describedby="clip-note"><a href="assets/video/presentation/bonsai_genfusion.mp4">Download GenFusion video</a></video>
-          <figcaption><span class="clip-scene-caption">Bonsai · Mip-NeRF 360</span><a id="clip-baseline-download" href="assets/video/presentation/bonsai_genfusion.mp4" download>Download clip ↓</a></figcaption>
+          <video id="clip-baseline-video" class="clip-video" src="assets/video/presentation/bonsai_genfusion.mp4" poster="assets/video/presentation/bonsai_genfusion.png" controls muted playsinline preload="none" width="960" height="540" aria-label="Bonsai: GenFusion">Your browser does not support embedded video.</video>
         </figure>
         <figure class="clip-card">
           <div class="clip-card-heading"><h2 id="clip-ours-heading">Ours</h2><div class="clip-select" id="clip-output-control" hidden><label class="sr-only" for="clip-output">Our rendering version</label><select id="clip-output"><option value="ours">Ours</option><option value="ours_difixed">Ours + DiFix3D</option></select></div></div>
-          <video id="clip-ours-video" class="clip-video" src="assets/video/presentation/bonsai_ours.mp4" poster="assets/video/presentation/bonsai_ours.png" controls muted playsinline preload="none" width="960" height="540" aria-label="Bonsai: Ours" aria-describedby="clip-note"><a href="assets/video/presentation/bonsai_ours.mp4">Download our video</a></video>
-          <figcaption><span class="clip-scene-caption">Bonsai · Mip-NeRF 360</span><a id="clip-ours-download" href="assets/video/presentation/bonsai_ours.mp4" download>Download clip ↓</a></figcaption>
+          <video id="clip-ours-video" class="clip-video" src="assets/video/presentation/bonsai_ours.mp4" poster="assets/video/presentation/bonsai_ours.png" controls muted playsinline preload="none" width="960" height="540" aria-label="Bonsai: Ours">Your browser does not support embedded video.</video>
         </figure>
       </div>
       <div class="clip-playback" id="clip-playback" aria-label="Shared video playback" hidden>
@@ -79,7 +77,6 @@
         <output id="clip-time" for="clip-progress" aria-live="off">0.0 / 5.0 s</output>
       </div>
       <p id="clip-processing-note" class="clip-processing-note" hidden>Ours + DiFix3D applies an additional DiFix3D post-processing step at render time, as shown in the supplementary presentation.</p>
-      <p class="source-note" id="clip-note">Individual clips from the supplementary presentation, at their original resolution and playback speed. Shorter clips hold their final frame.</p>
       <p id="clip-status" class="clip-status" role="status" aria-live="polite"></p>
       <noscript><p class="source-note">Enable JavaScript to switch scenes and methods or synchronize playback. The two Bonsai clips remain playable above.</p></noscript>
     </section>
@@ -102,44 +99,18 @@
       </div>
     </section>
 
-    <section class="section section-tint" id="results" aria-labelledby="results-heading">
-      <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">QUALITATIVE COMPARISONS</p><h2 id="results-heading">A closer look at the unseen</h2></div><p>Choose a scene, a view, and a method.<br>Drag the divider to compare.</p></div>
-        <div class="result-scenes" aria-label="Comparison scene">
-          <button type="button" data-scene="bonsai" aria-pressed="true"><img src="assets/results/bonsai-ours-1.jpg" width="480" height="270" alt="" loading="lazy"><span>Bonsai<small>Mip-NeRF 360</small></span></button>
-          <button type="button" data-scene="garden" aria-pressed="false"><img src="assets/results/garden-ours-2.jpg" width="480" height="270" alt="" loading="lazy"><span>Garden<small>Mip-NeRF 360</small></span></button>
-          <button type="button" data-scene="workshop" aria-pressed="false"><img src="assets/results/scannet-ours-1.jpg" width="480" height="270" alt="" loading="lazy"><span>Workshop<small>ScanNet++</small></span></button>
-          <button type="button" data-scene="meeting" aria-pressed="false"><img src="assets/results/scannet-ours-3.jpg" width="480" height="270" alt="" loading="lazy"><span>Meeting room<small>ScanNet++</small></span></button>
-        </div>
-        <div class="result-controls">
-          <div class="method-control"><label for="baseline">Compare with</label><select id="baseline"><option value="genfusion">GenFusion</option><option value="original">Original 3DGS</option><option value="fsgs">Few-Shot GS</option><option value="guidedvd">Guidedvd-3dgs</option></select></div>
-          <div class="view-control"><span id="view-label">View</span><div id="view-buttons" aria-labelledby="view-label"></div></div>
-        </div>
-        <div class="compare result-compare" data-compare style="--split: 50%">
-          <img class="compare-after" id="result-after" src="assets/results/bonsai-ours-1.jpg" width="480" height="270" alt="Bonsai, view 1: Filling the Unseen." loading="lazy">
-          <img class="compare-before" id="result-before" src="assets/results/bonsai-genfusion-1.jpg" width="480" height="270" alt="Bonsai, view 1: GenFusion." loading="lazy">
-          <span class="compare-label before-label" id="result-before-label">GenFusion</span><span class="compare-label after-label">Ours <span aria-hidden="true">✦</span></span>
-          <div class="compare-divider" aria-hidden="true"><span>‹<i></i>›</span></div>
-          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Compare GenFusion with our method on Bonsai" aria-valuetext="50% baseline, 50% our method">
-        </div>
-        <div class="comparison-caption"><p id="result-caption" aria-live="polite">Bonsai · Mip-NeRF 360 · View 1</p><a id="full-comparison" class="text-link" href="assets/figures/bonsai-comparison.pdf" target="_blank" rel="noopener">Full comparison figure <span aria-hidden="true">↗</span></a></div>
-        <div class="method-strip" id="method-strip" aria-label="All available methods for this view"></div>
-        <p class="source-note">Images are extracted directly from the manuscript figures at their original resolution. Mip-NeRF 360 has no ground-truth images for these extrapolation views; ScanNet++ uses a controlled partial-scene reconstruction protocol.</p>
-      </div>
-    </section>
-
     <section class="section container" id="method" aria-labelledby="method-heading">
       <div class="section-intro"><p class="eyebrow">HOW IT WORKS</p><h2 id="method-heading">Two stages. One coherent scene.</h2><p class="lead">A hierarchy of independent and dependent camera views reduces repeated generation cycles and the errors they accumulate.</p></div>
       <figure class="paper-figure">
-        <a href="assets/figures/method-overview.pdf" class="zoomable" data-lightbox="assets/figures/method-overview.png" data-caption="The hierarchical two-stage pipeline and DIBR-based video depth alignment." aria-label="Enlarge the method overview"><img src="assets/figures/method-overview.png" width="2000" height="1029" alt="Pipeline: independently inpaint camera views and generate videos in stage one, propagate results with depth, then complete dependent views in stage two. Video depth alignment provides depth priors." loading="lazy"><span class="zoom-hint" aria-hidden="true">↗</span></a>
-        <figcaption>Independent views support parallel generation and reconstruction. Dependent views complete the remaining gaps. DIBR-based video depth alignment supplies geometry priors throughout the process.</figcaption>
+        <a href="assets/figures/method-overview.pdf" class="zoomable" data-lightbox="assets/figures/method-overview.png" data-caption-id="method-overview-caption" aria-label="Enlarge the method overview"><img src="assets/figures/method-overview.png" width="2000" height="1029" alt="Pipeline: independently inpaint camera views and generate videos in stage one, propagate results with depth, then complete dependent views in stage two. Video depth alignment provides depth priors." loading="lazy"><span class="zoom-hint" aria-hidden="true">↗</span></a>
+        <figcaption id="method-overview-caption"><strong>An overview of our main pipeline.</strong> It consists of extrapolations for independent and dependent camera views. The former achieves extrapolation on the original scene over large areas in a single pass. The latter performs a second-stage residual completion on the remaining un-extrapolated regions, enabling seamless scene extrapolation. DIBR-based video depth alignment provides robust depth priors throughout the process. Blue indicates the generated data used in each stage.</figcaption>
       </figure>
       <div class="method-steps">
         <article><p class="eyebrow">STAGE 01</p><h3>Parallel extrapolation</h3><p>Mesh-based frustum collision detection identifies views whose inpainted regions do not overlap. Each view is inpainted independently, then connected to original training views with generated videos.</p></article>
         <article><p class="eyebrow">STAGE 02</p><h3>Residual completion</h3><p>Depth-based propagation carries the generated content to intermediate views. A second pass fills the remaining gaps and connects neighboring views along a closed trajectory.</p></article>
         <article><p class="eyebrow">FINAL REFINEMENT</p><h3>Scene interpolation</h3><p>Reuse the videos generated during extrapolation and incorporate artifact-removal outputs to improve rendering within the original scene. QA-Mask guides where updates should happen.</p></article>
       </div>
-      <details class="figure-details"><summary>How are independent camera views detected? <span aria-hidden="true">+</span></summary><div class="camera-detail"><img src="assets/figures/independent-cameras.png" width="2000" height="1516" alt="Mesh-based view frustums enclosing inpainted geometry. Non-colliding frustums identify independent views; colliding frustums identify dependent views." loading="lazy"><p>For each candidate view, inpainting and depth estimation define a probable depth range for the missing region. A mesh frustum encloses that region in 3D. Non-colliding frustums indicate independent camera views, enabling parallel generation without overlapping generated geometry.</p></div></details>
+      <details class="figure-details"><summary>How are independent camera views detected? <span aria-hidden="true">+</span></summary><figure class="camera-detail"><img src="assets/figures/independent-cameras.png" width="2000" height="1516" alt="Mesh-based view frustums enclosing inpainted geometry. Non-colliding frustums identify independent views; colliding frustums identify dependent views." loading="lazy"><figcaption id="camera-detection-caption"><strong>Independent Camera View Detection.</strong> We construct a mesh-based view frustum enclosing the geometry of the inpainted region for each candidate view <b>V</b><sup>i</sup>. Collision detection is performed for frustums to determine whether their camera views are independent. In this example, <b>V</b><sup>i-1</sup> and <b>V</b><sup>i</sup> are independent, while <b>V</b><sup>i</sup> and <b>V</b><sup>i+1</sup> collide with each other and are therefore not independent.</figcaption></figure></details>
     </section>
 
     <section class="section section-tint" id="qa-mask" aria-labelledby="qa-heading">
@@ -182,6 +153,6 @@
   </main>
   <footer class="footer container"><div><a class="brand" href="#">Filling the Unseen</a><p>Case Western Reserve University · ACM MM 2026</p></div><p>Page design inspired by <a href="https://yiren-lu.com/project_pages/view-consistent_object_removal_in_radiance_fields/">View-consistent Object Removal</a>.<br><a data-site-source href="https://github.com/vulab-AI/filling-the-unseen">Website source</a> · Paper and figures: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p></footer>
   <dialog id="figure-dialog" aria-labelledby="dialog-caption"><button type="button" class="dialog-close" aria-label="Close enlarged figure">×</button><img id="dialog-image" alt=""><p id="dialog-caption"></p><a id="dialog-pdf" class="text-link" target="_blank" rel="noopener">Open original PDF ↗</a></dialog>
-  <noscript><style>.compare-before,.compare-label,.compare-divider,.compare-range,.result-scenes,.result-controls,.method-strip,.metrics-tabs,#copy-citation{display:none!important}#metrics-mipnerf[hidden]{display:block!important}</style></noscript>
+  <noscript><style>.metrics-tabs,#copy-citation{display:none!important}#metrics-mipnerf[hidden]{display:block!important}</style></noscript>
 </body>
 </html>

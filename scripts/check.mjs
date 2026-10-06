@@ -12,13 +12,27 @@ assert(!/href="#(?:video|results)"/.test(publicationLinks), 'Hero must not show 
 assert(!/THE IDEA|A more complete world|from an incomplete capture|SEE IT IN MOTION|SUPPLEMENTARY VIDEO|supplementary-video|assets\/video\/supplementary\.mp4/.test(html), 'Old idea heading and full-length video section must not return');
 assert(html.indexOf('class="publication-links"') < html.indexOf('id="scene-videos"') && html.indexOf('id="scene-videos"') < html.indexOf('id="overview"'), 'Individual scene videos must sit between publication links and the idea');
 assert.equal([...html.matchAll(/class="step-number"/g)].length, 3, 'Keep all three contributions');
+assert(!/QUALITATIVE COMPARISONS|id="results"|data-scene=|clip-scene-caption|clip-baseline-download|clip-ours-download|id="clip-note"|Individual clips from the supplementary presentation|Download clip/.test(html), 'Removed qualitative section and video captions must not return');
+// Verbatim captions from arxiv_submission.zip / sigconf.tex; LaTeX styling is rendered as HTML.
+const manuscriptCaptions = {
+  "method-overview-caption": "An overview of our main pipeline. It consists of extrapolations for independent and dependent camera views. The former achieves extrapolation on the original scene over large areas in a single pass. The latter performs a second-stage residual completion on the remaining un-extrapolated regions, enabling seamless scene extrapolation. DIBR-based video depth alignment provides robust depth priors throughout the process. Blue indicates the generated data used in each stage.",
+  "camera-detection-caption": "Independent Camera View Detection. We construct a mesh-based view frustum enclosing the geometry of the inpainted region for each candidate view Vi. Collision detection is performed for frustums to determine whether their camera views are independent. In this example, Vi-1 and Vi are independent, while Vi and Vi+1 collide with each other and are therefore not independent."
+};
+for (const [id, expected] of Object.entries(manuscriptCaptions)) {
+  const caption = html.match(new RegExp('<figcaption id="' + id + '">([\\s\\S]*?)</figcaption>'));
+  assert(caption, `Missing original caption: ${id}`);
+  assert.equal(caption[1].replace(/<[^>]+>/g, ''), expected, `Caption must match manuscript: ${id}`);
+}
 const siteUrl = html.match(/rel="canonical" href="([^"]+)"/)[1];
 for (const [, url] of html.matchAll(/(?:property="og:image"|name="citation_pdf_url") content="([^"]+)"/g)) {
   assert(url.startsWith(siteUrl), `Metadata points outside this site: ${url}`);
   assert((await stat(resolve(root, url.slice(siteUrl.length)))).isFile(), `Missing metadata asset: ${url}`);
 }
-const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);
 assert.equal(ids.length, new Set(ids).size, 'HTML IDs must be unique');
+for (const [, references] of html.matchAll(/(?:aria-labelledby|aria-describedby|data-caption-id)="([^"]+)"/g)) {
+  for (const id of references.split(/\s+/)) assert(ids.includes(id), `Missing accessible description/caption: ${id}`);
+}
 for (const [, url] of html.matchAll(/\b(?:src|href|poster|data-lightbox)="([^"]+)"/g)) {
   if (/^(https?:|mailto:)/.test(url) || url === '#') continue;
   if (url.startsWith('#')) assert(ids.includes(url.slice(1)), `Missing anchor: ${url}`);

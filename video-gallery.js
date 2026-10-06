@@ -70,7 +70,7 @@
     } catch (error) {
       if (request !== playbackRequest) return;
       pause();
-      if (error.name !== 'AbortError') status.textContent = 'Playback could not start. Try Play comparison again or download the clips.';
+      if (error.name !== 'AbortError') status.textContent = 'Playback could not start. Try Play comparison again.';
     }
   }
 
@@ -111,14 +111,10 @@
     clock = videos[clips.findIndex(clip => clip.duration === duration)];
     $('#clip-processing-note').hidden = output !== 'ours_difixed';
     $$('[data-clip-scene]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.clipScene === scene.id)));
-    $$('.clip-scene-caption').forEach(caption => { caption.textContent = `${scene.title} · ${scene.dataset}`; });
     videos.forEach((video, index) => {
       const clip = clips[index];
       const side = index ? 'ours' : 'baseline';
       $(`#clip-${side}-heading`).textContent = clip.label;
-      $(`#clip-${side}-download`).href = clip.src;
-      video.querySelector('a').href = clip.src;
-      video.querySelector('a').textContent = `Download ${scene.title}: ${clip.label}`;
       video.setAttribute('aria-label', `${scene.title}: ${clip.label}`);
       video.controls = false;
       video.muted = true;
@@ -135,7 +131,7 @@
       status.textContent = '';
     } catch (error) {
       if (request !== loadRequest || error.name === 'AbortError') return;
-      status.textContent = 'Could not load this comparison. Try another scene or use the download links.';
+      status.textContent = 'Could not load this comparison. Try another scene or reload the page.';
       videos.forEach(video => { video.controls = true; });
     } finally {
       if (request === loadRequest) gallery.removeAttribute('aria-busy');
@@ -171,7 +167,7 @@
       }
       await loadScene();
     } catch {
-      status.textContent = 'Scene selection is unavailable. You can still play or download the Bonsai clips above.';
+      status.textContent = 'Scene selection is unavailable. You can still play the Bonsai clips above.';
       videos.forEach(video => { video.controls = true; });
     }
   }
