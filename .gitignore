@@ -6,5 +6,6 @@ dist/
 .tools/
 *.zip
 /*.mp4
+/*.pptx
 *.log
 .DS_Store

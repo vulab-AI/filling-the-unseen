@@ -5,8 +5,8 @@ import { resolve, extname, sep } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..', process.argv.includes('--dist') ? 'dist' : '.');
 const port = Number(process.env.PORT || 4173);
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.mp4': 'video/mp4', '.vtt': 'text/vtt', '.pdf': 'application/pdf', '.ttf': 'font/ttf', '.txt': 'text/plain', '.xml': 'application/xml' };
-const publicRoots = new Set(['index.html', 'styles.css', 'app.js', 'site-config.js', 'assets', 'robots.txt', 'sitemap.xml']);
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.mp4': 'video/mp4', '.vtt': 'text/vtt', '.pdf': 'application/pdf', '.ttf': 'font/ttf', '.txt': 'text/plain', '.xml': 'application/xml' };
+const publicRoots = new Set(['index.html', 'styles.css', 'app.js', 'video-gallery.js', 'site-config.js', 'assets', 'robots.txt', 'sitemap.xml']);
 createServer(async (request, response) => {
   try {
     const path = decodeURIComponent(new URL(request.url, 'http://localhost').pathname).replace(/^\/+/, '') || 'index.html';

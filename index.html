@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="site-config.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="video-gallery.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -52,9 +53,40 @@
       </div>
     </section>
 
-    <section class="section section-tint" id="overview" aria-labelledby="overview-heading">
+    <section class="clip-gallery container" id="scene-videos" aria-label="Scene video comparisons">
+      <div class="clip-scenes" id="clip-scenes" aria-label="Video scene" hidden>
+        <button type="button" data-clip-scene="bonsai" aria-pressed="true"><img src="assets/video/presentation/bonsai_ours.png" width="960" height="540" alt=""><span>Bonsai<small>Mip-NeRF 360</small></span></button>
+        <button type="button" data-clip-scene="garden" aria-pressed="false"><img src="assets/video/presentation/garden_ours.png" width="960" height="540" alt=""><span>Garden<small>Mip-NeRF 360</small></span></button>
+        <button type="button" data-clip-scene="0e75f3c4d9" aria-pressed="false"><img src="assets/video/presentation/0e75f3c4d9_ours.png" width="960" height="540" alt=""><span>Workshop<small>ScanNet++ · 0e75f3c4d9</small></span></button>
+        <button type="button" data-clip-scene="569f99f881" aria-pressed="false"><img src="assets/video/presentation/569f99f881_ours.png" width="960" height="540" alt=""><span>Meeting room<small>ScanNet++ · 569f99f881</small></span></button>
+      </div>
+      <div class="clip-pair">
+        <figure class="clip-card">
+          <div class="clip-card-heading"><h2 id="clip-baseline-heading">GenFusion</h2><div class="clip-select" id="clip-baseline-control" hidden><label class="sr-only" for="clip-baseline">Comparison method</label><select id="clip-baseline"><option value="genfusion">GenFusion</option><option value="guidedvd">Guidedvd-3dgs</option><option value="fsgs">FSGS</option><option value="difix">DiFix3D+</option></select></div></div>
+          <video id="clip-baseline-video" class="clip-video" src="assets/video/presentation/bonsai_genfusion.mp4" poster="assets/video/presentation/bonsai_genfusion.png" controls muted playsinline preload="none" width="960" height="540" aria-label="Bonsai: GenFusion" aria-describedby="clip-note"><a href="assets/video/presentation/bonsai_genfusion.mp4">Download GenFusion video</a></video>
+          <figcaption><span class="clip-scene-caption">Bonsai · Mip-NeRF 360</span><a id="clip-baseline-download" href="assets/video/presentation/bonsai_genfusion.mp4" download>Download clip ↓</a></figcaption>
+        </figure>
+        <figure class="clip-card">
+          <div class="clip-card-heading"><h2 id="clip-ours-heading">Ours</h2><div class="clip-select" id="clip-output-control" hidden><label class="sr-only" for="clip-output">Our rendering version</label><select id="clip-output"><option value="ours">Ours</option><option value="ours_difixed">Ours + DiFix3D</option></select></div></div>
+          <video id="clip-ours-video" class="clip-video" src="assets/video/presentation/bonsai_ours.mp4" poster="assets/video/presentation/bonsai_ours.png" controls muted playsinline preload="none" width="960" height="540" aria-label="Bonsai: Ours" aria-describedby="clip-note"><a href="assets/video/presentation/bonsai_ours.mp4">Download our video</a></video>
+          <figcaption><span class="clip-scene-caption">Bonsai · Mip-NeRF 360</span><a id="clip-ours-download" href="assets/video/presentation/bonsai_ours.mp4" download>Download clip ↓</a></figcaption>
+        </figure>
+      </div>
+      <div class="clip-playback" id="clip-playback" aria-label="Shared video playback" hidden>
+        <button class="button button-outline" type="button" id="clip-play" disabled>Play comparison</button>
+        <button class="clip-restart" type="button" id="clip-restart" disabled>Restart ↺</button>
+        <label class="sr-only" for="clip-progress">Video playback position</label><input id="clip-progress" type="range" min="0" max="1000" step="1" value="0" aria-valuetext="0.0 of 5.0 seconds" disabled>
+        <output id="clip-time" for="clip-progress" aria-live="off">0.0 / 5.0 s</output>
+      </div>
+      <p id="clip-processing-note" class="clip-processing-note" hidden>Ours + DiFix3D applies an additional DiFix3D post-processing step at render time, as shown in the supplementary presentation.</p>
+      <p class="source-note" id="clip-note">Individual clips from the supplementary presentation, at their original resolution and playback speed. Shorter clips hold their final frame.</p>
+      <p id="clip-status" class="clip-status" role="status" aria-live="polite"></p>
+      <noscript><p class="source-note">Enable JavaScript to switch scenes and methods or synchronize playback. The two Bonsai clips remain playable above.</p></noscript>
+    </section>
+
+    <section class="section section-tint" id="overview" aria-label="Idea">
       <div class="container">
-        <div class="section-intro"><p class="eyebrow">THE IDEA</p><h2 id="overview-heading">A more complete world,<br>from an incomplete capture.</h2><p class="lead">Novel views reveal what reconstruction leaves behind. We expand a 3D scene beyond its observed boundaries, while improving the quality of what is already visible.</p></div>
+        <p class="idea-statement">Novel views reveal what reconstruction leaves behind. We expand a 3D scene beyond its observed boundaries, while improving the quality of what is already visible.</p>
         <div class="contributions">
           <article><span class="step-number">01</span><h3>Expand in parallel</h3><p>Detect independent camera views in 3D, then generate and reconstruct non-overlapping regions in a single pass.</p></article>
           <article><span class="step-number">02</span><h3>Complete the gaps</h3><p>Fill the remaining regions between independent views with a second stage of residual completion.</p></article>
@@ -68,15 +100,6 @@
           </div>
         </details>
       </div>
-    </section>
-
-    <section class="section container" id="video" aria-labelledby="video-heading">
-      <div class="section-heading"><div><p class="eyebrow">SEE IT IN MOTION</p><h2 id="video-heading">Scene extrapolation results</h2></div><span class="meta-label">SUPPLEMENTARY VIDEO · 1080P</span></div>
-      <video id="supplementary-video" class="demo-video" controls playsinline preload="none" poster="assets/video/poster.jpg" width="1920" height="1080" aria-describedby="video-description">
-        <source src="assets/video/supplementary.mp4" type="video/mp4">
-        <p>Your browser does not support embedded video. <a href="assets/video/supplementary.mp4">Download the supplementary video.</a></p>
-      </video>
-      <div class="video-caption"><p id="video-description">Continuous camera trajectories on Mip-NeRF 360 and ScanNet++, with side-by-side baseline comparisons. The original supplementary video is silent; method names and additional render-time processing are labeled in the video.</p><a class="text-link" href="assets/video/supplementary.mp4" download>Download video <span aria-hidden="true">↓</span></a></div>
     </section>
 
     <section class="section section-tint" id="results" aria-labelledby="results-heading">

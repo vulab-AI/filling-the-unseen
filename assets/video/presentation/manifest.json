@@ -1,0 +1,523 @@
+{
+  "source": "supp videos.pptx",
+  "source_sha256": "514b964423f266ec1c4b45096d198f55b090c252920c9a78942e94437a66faa2",
+  "conversion": "H.264/libx264 CRF 18, yuv420p, fast-start; original dimensions, frame count, frame rate, and duration preserved. No trimming, interpolation, or image enhancement.",
+  "scenes": [
+    {
+      "id": "bonsai",
+      "title": "Bonsai",
+      "dataset": "Mip-NeRF 360",
+      "clips": {
+        "genfusion": {
+          "name": "bonsai_genfusion",
+          "scene": "bonsai",
+          "method": "genfusion",
+          "label": "GenFusion",
+          "source_entry": "ppt/media/media1.mp4",
+          "source_sha256": "1103fe7589cfbcd480c5fa59c8352c191b1304d7cd4215966b45bd11991e84a0",
+          "slides": [
+            2
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/bonsai_genfusion.mp4",
+          "poster": "assets/video/presentation/bonsai_genfusion.png",
+          "width": 960,
+          "height": 540,
+          "duration": 5.0,
+          "frames": 55,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "3fcdd008dd698ac0da621f571fe435cbdcc0eb00eede7d7a08c4fc891fa81ee8",
+          "bytes": 1216454
+        },
+        "guidedvd": {
+          "name": "bonsai_guidedvd",
+          "scene": "bonsai",
+          "method": "guidedvd",
+          "label": "Guidedvd-3dgs",
+          "source_entry": "ppt/media/media2.mp4",
+          "source_sha256": "c990299309cf152090b1976b3a8667df151cc669266f842835d83013dc0eacd2",
+          "slides": [
+            2
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/bonsai_guidedvd.mp4",
+          "poster": "assets/video/presentation/bonsai_guidedvd.png",
+          "width": 960,
+          "height": 540,
+          "duration": 5.0,
+          "frames": 55,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "1a7a6d04b9deb8e6db641855b60c5259b9df613e543d66c98758b2d2fa6cd605",
+          "bytes": 1361375
+        },
+        "ours": {
+          "name": "bonsai_ours",
+          "scene": "bonsai",
+          "method": "ours",
+          "label": "Ours",
+          "source_entry": "ppt/media/media3.mp4",
+          "source_sha256": "5bed00c981c943ad6324f5558dc165534208c8fc1b881465a42e926351efda98",
+          "slides": [
+            2,
+            3
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/bonsai_ours.mp4",
+          "poster": "assets/video/presentation/bonsai_ours.png",
+          "width": 960,
+          "height": 540,
+          "duration": 5.0,
+          "frames": 55,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "fa17e6d17d15a5511f789f2589e9927f00863138b7689d82e8d64349edb7363f",
+          "bytes": 1325628
+        },
+        "fsgs": {
+          "name": "bonsai_fsgs",
+          "scene": "bonsai",
+          "method": "fsgs",
+          "label": "FSGS",
+          "source_entry": "ppt/media/media4.mp4",
+          "source_sha256": "5f093659360717bee14bcd12f54134cb0173cee27e7abec8642ad264d64817da",
+          "slides": [
+            3
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/bonsai_fsgs.mp4",
+          "poster": "assets/video/presentation/bonsai_fsgs.png",
+          "width": 960,
+          "height": 540,
+          "duration": 5.0,
+          "frames": 55,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "5a3fb1efe7569e9f2ae3aba1f105da1676f1448fddc123334c5ab0afc13fe93b",
+          "bytes": 1217911
+        },
+        "difix": {
+          "name": "bonsai_difix",
+          "scene": "bonsai",
+          "method": "difix",
+          "label": "DiFix3D+",
+          "source_entry": "ppt/media/media5.mp4",
+          "source_sha256": "f1b3c13667e622985237feac26b8a3de7c8472150d933e7f91f980d352be6d87",
+          "slides": [
+            3
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/bonsai_difix.mp4",
+          "poster": "assets/video/presentation/bonsai_difix.png",
+          "width": 960,
+          "height": 540,
+          "duration": 5.0,
+          "frames": 55,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "b5c038fdd1e8c75283548acd501d820bd3f5413a6e6990cc581143823db1c98b",
+          "bytes": 1768763
+        },
+        "ours_difixed": {
+          "name": "bonsai_ours_difixed",
+          "scene": "bonsai",
+          "method": "ours_difixed",
+          "label": "Ours + DiFix3D",
+          "source_entry": "ppt/media/media6.mp4",
+          "source_sha256": "80357a01a9cdb56a230e12fe85776e2cf9439c3fef5b3294a1a04360aaadbb6a",
+          "slides": [
+            4
+          ],
+          "post_processing": "DiFix3D at render time",
+          "src": "assets/video/presentation/bonsai_ours_difixed.mp4",
+          "poster": "assets/video/presentation/bonsai_ours_difixed.png",
+          "width": 960,
+          "height": 540,
+          "duration": 5.0,
+          "frames": 55,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "d15ede5f8640843bed94cd3cf316a13a4e2062f5bca666bdb7ceedf42f4e841a",
+          "bytes": 1596791
+        }
+      }
+    },
+    {
+      "id": "garden",
+      "title": "Garden",
+      "dataset": "Mip-NeRF 360",
+      "clips": {
+        "genfusion": {
+          "name": "garden_genfusion",
+          "scene": "garden",
+          "method": "genfusion",
+          "label": "GenFusion",
+          "source_entry": "ppt/media/media7.mp4",
+          "source_sha256": "1779cb59ff48c3e75c3b9591b292b99c622741a9799f89007837e28598b4e1d3",
+          "slides": [
+            5
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/garden_genfusion.mp4",
+          "poster": "assets/video/presentation/garden_genfusion.png",
+          "width": 960,
+          "height": 540,
+          "duration": 4.0,
+          "frames": 44,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "12c0ef09d02915b789c93b197820fa6b06217a90ce2ea5f93db4b3866bfc88f1",
+          "bytes": 3562773
+        },
+        "guidedvd": {
+          "name": "garden_guidedvd",
+          "scene": "garden",
+          "method": "guidedvd",
+          "label": "Guidedvd-3dgs",
+          "source_entry": "ppt/media/media8.mp4",
+          "source_sha256": "ac5e36b988280613001e533b3a6341521845fc58640fec4230bc0b2294b5312e",
+          "slides": [
+            5
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/garden_guidedvd.mp4",
+          "poster": "assets/video/presentation/garden_guidedvd.png",
+          "width": 960,
+          "height": 540,
+          "duration": 4.0,
+          "frames": 44,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "d2a21e387c8a4af6ae50476f472b3548eff52a8cc361a1b3628740d9c4e6fe86",
+          "bytes": 2782993
+        },
+        "ours": {
+          "name": "garden_ours",
+          "scene": "garden",
+          "method": "ours",
+          "label": "Ours",
+          "source_entry": "ppt/media/media9.mp4",
+          "source_sha256": "35ef3860b5f05231463ef3bb3222e9d0c9f59577ec78967169da288dbed23272",
+          "slides": [
+            5,
+            6
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/garden_ours.mp4",
+          "poster": "assets/video/presentation/garden_ours.png",
+          "width": 960,
+          "height": 540,
+          "duration": 4.0,
+          "frames": 44,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "fb25764dd491e914055b394592de15f9d302eb213a01434d4775ac0b9afad3a6",
+          "bytes": 3979071
+        },
+        "fsgs": {
+          "name": "garden_fsgs",
+          "scene": "garden",
+          "method": "fsgs",
+          "label": "FSGS",
+          "source_entry": "ppt/media/media10.mp4",
+          "source_sha256": "aa1b8853b1dda584eeb9b754a0bdcbbe378fee585b423ff15a5f4b241e382830",
+          "slides": [
+            6
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/garden_fsgs.mp4",
+          "poster": "assets/video/presentation/garden_fsgs.png",
+          "width": 960,
+          "height": 540,
+          "duration": 4.0,
+          "frames": 44,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "e68da01d6d491a79d0d1a8b7346e046a1035027a9059c49fba921a2a991f9804",
+          "bytes": 2953525
+        },
+        "difix": {
+          "name": "garden_difix",
+          "scene": "garden",
+          "method": "difix",
+          "label": "DiFix3D+",
+          "source_entry": "ppt/media/media11.mp4",
+          "source_sha256": "4cd5ae9eb8a19214df08e2e789b82d1a5b02532190d898504595bf9fce383ed9",
+          "slides": [
+            6
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/garden_difix.mp4",
+          "poster": "assets/video/presentation/garden_difix.png",
+          "width": 960,
+          "height": 540,
+          "duration": 4.0,
+          "frames": 44,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "f73500a9575ab241a42d118d9149f6f7182733cc10b2d66db30fa6b3cf19f881",
+          "bytes": 4028650
+        },
+        "ours_difixed": {
+          "name": "garden_ours_difixed",
+          "scene": "garden",
+          "method": "ours_difixed",
+          "label": "Ours + DiFix3D",
+          "source_entry": "ppt/media/media12.mp4",
+          "source_sha256": "15857f7924086d83088849ab2b52ba40b603b63cc22c94357a00cbde8a59d0a7",
+          "slides": [
+            7
+          ],
+          "post_processing": "DiFix3D at render time",
+          "src": "assets/video/presentation/garden_ours_difixed.mp4",
+          "poster": "assets/video/presentation/garden_ours_difixed.png",
+          "width": 960,
+          "height": 540,
+          "duration": 4.0,
+          "frames": 44,
+          "fps": "11/1",
+          "codec": "h264",
+          "sha256": "e1328db9dc2ce46354f7bc1901967c9961d4d7c9b163591e4614d09f5b620adf",
+          "bytes": 4905252
+        }
+      }
+    },
+    {
+      "id": "0e75f3c4d9",
+      "title": "Workshop",
+      "dataset": "ScanNet++",
+      "clips": {
+        "genfusion": {
+          "name": "0e75f3c4d9_genfusion",
+          "scene": "0e75f3c4d9",
+          "method": "genfusion",
+          "label": "GenFusion",
+          "source_entry": "ppt/media/media13.mp4",
+          "source_sha256": "cbdf47e35b8741ff19d33db23edc69d0037b88163d7e66c14ada3b20c867f308",
+          "slides": [
+            8
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/0e75f3c4d9_genfusion.mp4",
+          "poster": "assets/video/presentation/0e75f3c4d9_genfusion.png",
+          "width": 960,
+          "height": 540,
+          "duration": 10.666667,
+          "frames": 320,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "298bd7f81665576d98994dc19d8af6b13fbf4baa3ca2a62acac75010ed904aac",
+          "bytes": 9345523
+        },
+        "guidedvd": {
+          "name": "0e75f3c4d9_guidedvd",
+          "scene": "0e75f3c4d9",
+          "method": "guidedvd",
+          "label": "Guidedvd-3dgs",
+          "source_entry": "ppt/media/media14.mp4",
+          "source_sha256": "c6d6c30fd6e7068e3cecfff52250007a0cb72f8034f9aebaa242a3e81cba2c11",
+          "slides": [
+            8
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/0e75f3c4d9_guidedvd.mp4",
+          "poster": "assets/video/presentation/0e75f3c4d9_guidedvd.png",
+          "width": 960,
+          "height": 540,
+          "duration": 10.666667,
+          "frames": 320,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "768e8c59e2962349f1e684615cdee1a576188ee996080228cc6f2428c1e93cd2",
+          "bytes": 7673303
+        },
+        "ours": {
+          "name": "0e75f3c4d9_ours",
+          "scene": "0e75f3c4d9",
+          "method": "ours",
+          "label": "Ours",
+          "source_entry": "ppt/media/media15.mp4",
+          "source_sha256": "2804be3d6a22e595da4c3887fba4434df290418aba8974f8b0877fe8a553be53",
+          "slides": [
+            8,
+            9
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/0e75f3c4d9_ours.mp4",
+          "poster": "assets/video/presentation/0e75f3c4d9_ours.png",
+          "width": 960,
+          "height": 540,
+          "duration": 10.333333,
+          "frames": 310,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "cd57a01a0da9d83129dbbb988576dd9cf68e65f9344d9aecc39473471240bdc6",
+          "bytes": 9131371
+        },
+        "fsgs": {
+          "name": "0e75f3c4d9_fsgs",
+          "scene": "0e75f3c4d9",
+          "method": "fsgs",
+          "label": "FSGS",
+          "source_entry": "ppt/media/media16.mp4",
+          "source_sha256": "d6b5230b168fe285716ac5632b5960656b656fdff88c2b02bab2ac9b02c4c174",
+          "slides": [
+            9
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/0e75f3c4d9_fsgs.mp4",
+          "poster": "assets/video/presentation/0e75f3c4d9_fsgs.png",
+          "width": 960,
+          "height": 540,
+          "duration": 10.666667,
+          "frames": 320,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "dd998764d6b15624c85ce5a976f59ceae2d49f569b9f2572f5e35bd598a44088",
+          "bytes": 7586434
+        },
+        "difix": {
+          "name": "0e75f3c4d9_difix",
+          "scene": "0e75f3c4d9",
+          "method": "difix",
+          "label": "DiFix3D+",
+          "source_entry": "ppt/media/media17.mp4",
+          "source_sha256": "ddef0ffb48e0e391d58725f7e2cae260edbbca537cb5a7cdb1c7e2004f580468",
+          "slides": [
+            9
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/0e75f3c4d9_difix.mp4",
+          "poster": "assets/video/presentation/0e75f3c4d9_difix.png",
+          "width": 960,
+          "height": 540,
+          "duration": 10.666667,
+          "frames": 320,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "068fce74dd99343d10a4391b5696003b541fda0c149282b0859147e9dba814b7",
+          "bytes": 8945983
+        }
+      }
+    },
+    {
+      "id": "569f99f881",
+      "title": "Meeting room",
+      "dataset": "ScanNet++",
+      "clips": {
+        "genfusion": {
+          "name": "569f99f881_genfusion",
+          "scene": "569f99f881",
+          "method": "genfusion",
+          "label": "GenFusion",
+          "source_entry": "ppt/media/media18.mp4",
+          "source_sha256": "03a6de3a1f624fe9c6a3b0bb095bc2ff0bd82125e7820a060da64dd285c52073",
+          "slides": [
+            10
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/569f99f881_genfusion.mp4",
+          "poster": "assets/video/presentation/569f99f881_genfusion.png",
+          "width": 960,
+          "height": 540,
+          "duration": 9.3,
+          "frames": 279,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "a466d55d96e097decac87207e5f1b2dfab2b75fd8543708d4aa6d57f0df58592",
+          "bytes": 4636402
+        },
+        "guidedvd": {
+          "name": "569f99f881_guidedvd",
+          "scene": "569f99f881",
+          "method": "guidedvd",
+          "label": "Guidedvd-3dgs",
+          "source_entry": "ppt/media/media19.mp4",
+          "source_sha256": "26b7b96b4e3a372212973df7364c4f77ec5b1c98f10d4092e55fedca82d5ab47",
+          "slides": [
+            10
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/569f99f881_guidedvd.mp4",
+          "poster": "assets/video/presentation/569f99f881_guidedvd.png",
+          "width": 960,
+          "height": 540,
+          "duration": 9.3,
+          "frames": 279,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "64821815ffe5152e0770037ad39a5699d9f23fca906d94d59cc187aa5e5f0dcb",
+          "bytes": 4137136
+        },
+        "ours": {
+          "name": "569f99f881_ours",
+          "scene": "569f99f881",
+          "method": "ours",
+          "label": "Ours",
+          "source_entry": "ppt/media/media20.mp4",
+          "source_sha256": "b365cbc02c0b6546fe88aa623636ad68a6abafbefdc9379513b747867ea77bd8",
+          "slides": [
+            10,
+            11
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/569f99f881_ours.mp4",
+          "poster": "assets/video/presentation/569f99f881_ours.png",
+          "width": 960,
+          "height": 540,
+          "duration": 9.066667,
+          "frames": 272,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "d71cf32cd9dffd48493f17f297aae95bfce4e4fec93f874c797a9feb1354cd3f",
+          "bytes": 4445303
+        },
+        "fsgs": {
+          "name": "569f99f881_fsgs",
+          "scene": "569f99f881",
+          "method": "fsgs",
+          "label": "FSGS",
+          "source_entry": "ppt/media/media21.mp4",
+          "source_sha256": "facb60fc30d363d0d640a19574fd86f4a1e9527b0da4a2f958b445a0886f4e72",
+          "slides": [
+            11
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/569f99f881_fsgs.mp4",
+          "poster": "assets/video/presentation/569f99f881_fsgs.png",
+          "width": 960,
+          "height": 540,
+          "duration": 9.3,
+          "frames": 279,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "a565762df466c1bb59640a4fb928ccf03387636454b7476be732c6dcd4b7b24e",
+          "bytes": 3949698
+        },
+        "difix": {
+          "name": "569f99f881_difix",
+          "scene": "569f99f881",
+          "method": "difix",
+          "label": "DiFix3D+",
+          "source_entry": "ppt/media/media22.mp4",
+          "source_sha256": "99c3640b96bf580acd9aa50f23738565f9590f6ae5104fa3a119794e82f89490",
+          "slides": [
+            11
+          ],
+          "post_processing": null,
+          "src": "assets/video/presentation/569f99f881_difix.mp4",
+          "poster": "assets/video/presentation/569f99f881_difix.png",
+          "width": 960,
+          "height": 540,
+          "duration": 9.3,
+          "frames": 279,
+          "fps": "30/1",
+          "codec": "h264",
+          "sha256": "221e07dac3b9e2f0008f38b918e3bb9280d7d5b7177eedfda0dde25765364109",
+          "bytes": 4446124
+        }
+      }
+    }
+  ]
+}

@@ -63,6 +63,34 @@ h1{font-size:clamp(44px,6.1vw,72px);letter-spacing:-3.5px;margin:23px 0 12px;lin
 
 .section{padding-block:76px}
 .section-tint{background:var(--tint)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.idea-statement{max-width:960px;margin:0 auto;text-align:center;font-size:clamp(21px,2.3vw,28px);line-height:1.65;letter-spacing:-.6px;font-weight:600;text-wrap:pretty}
+.clip-gallery{padding-bottom:48px}
+.clip-scenes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:24px}
+.clip-scenes button{display:flex;align-items:center;gap:10px;text-align:left;padding:8px;border:1px solid var(--line);background:white;border-radius:8px;min-width:0}
+.clip-scenes button[aria-pressed=true]{border-color:var(--ink);background:var(--selected)}
+.clip-scenes img{width:57px;height:43px;object-fit:cover;border-radius:4px}
+.clip-scenes span{font-size:13px;font-weight:700;line-height:1.5}
+.clip-scenes small{display:block;font-size:9px;font-weight:400;overflow-wrap:anywhere}
+.clip-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.clip-card-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:45px;margin-bottom:10px;flex-wrap:wrap}
+.clip-card-heading h2{font-size:17px;letter-spacing:-.3px}
+.clip-select select{min-height:36px;font-size:11px;max-width:175px}
+.clip-video{width:100%;aspect-ratio:16/9;background:#111;border:1px solid var(--line);border-radius:8px;object-fit:contain}
+.clip-card figcaption{display:flex;justify-content:space-between;gap:10px;font-size:10px;margin:9px 0 0}
+.clip-card figcaption a{white-space:nowrap;text-decoration:underline}
+.clip-playback{display:flex;align-items:center;gap:15px;margin-top:24px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.clip-playback .button{font-size:11px;min-width:145px;min-height:38px}
+.clip-restart{border:0;background:transparent;font-size:11px;white-space:nowrap;padding:8px 0}
+.clip-playback input{flex:1;min-width:0;accent-color:#000;cursor:pointer}
+.clip-playback output{font-size:11px;font-variant-numeric:tabular-nums;min-width:82px;text-align:right}
+.clip-playback button:disabled{cursor:wait;border-color:var(--line)}
+.clip-processing-note{font-size:12px;line-height:1.8;margin-top:17px;padding:12px 16px;border:1px solid var(--line);border-radius:6px;background:var(--tint)}
+.clip-status{font-size:12px;margin-top:8px}
+.clip-status:empty{display:none}
+@media(max-width:900px){.clip-scenes{grid-template-columns:repeat(2,minmax(0,1fr))}.clip-scenes small{font-size:10px}}
+@media(max-width:700px){.clip-gallery{padding-bottom:35px}.clip-scenes{gap:8px;margin-bottom:17px}.clip-scenes button{padding:6px;gap:8px}.clip-scenes img{width:44px;height:38px}.clip-scenes span{font-size:11px}.clip-scenes small{font-size:8px}.clip-pair{grid-template-columns:1fr;gap:20px}.clip-card-heading{margin-bottom:7px;min-height:36px}.clip-card-heading h2{font-size:15px}.clip-playback{display:grid;grid-template-columns:auto 1fr auto;gap:12px}.clip-playback .button{min-width:0}.clip-restart{justify-self:start}.clip-playback input{grid-row:2;grid-column:1/3;width:100%;margin:0}.clip-playback output{grid-row:2;grid-column:3}.clip-processing-note{font-size:11px}.idea-statement{font-size:21px;line-height:1.6;letter-spacing:-.4px}}
+@media print{.clip-scenes,.clip-select,.clip-playback,.clip-status{display:none!important}.clip-pair{break-inside:avoid}}
 .section-intro{text-align:center;max-width:760px;margin:0 auto 40px}
 .eyebrow{color:var(--ink);font-size:10px;font-weight:700;letter-spacing:1.8px;margin-bottom:13px}
 .lead{font-size:15px;line-height:1.9;max-width:665px;margin:19px auto 0}
