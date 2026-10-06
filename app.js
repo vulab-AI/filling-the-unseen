@@ -32,25 +32,6 @@ function loadImage(src) {
   });
 }
 
-let heroRequest = 0;
-$$('[data-hero]').forEach(button => {
-  button.addEventListener('click', async () => {
-    const request = ++heroRequest;
-    const scene = button.dataset.hero;
-    const before = `assets/results/teaser-${scene}-original.jpg`;
-    const after = `assets/results/teaser-${scene}-ours.jpg`;
-    try {
-      await Promise.all([loadImage(before), loadImage(after)]);
-      if (request !== heroRequest) return;
-      $('#hero-before').src = before;
-      $('#hero-after').src = after;
-      $('#hero-before').alt = `${button.textContent.trim()}: original 3DGS rendering with missing regions and artifacts.`;
-      $('#hero-after').alt = `${button.textContent.trim()}: Filling the Unseen completes missing regions and refines the scene.`;
-      $$('[data-hero]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    } catch (error) { console.error(error); }
-  });
-});
-
 const labels = {
   original: 'Original 3DGS', genfusion: 'GenFusion', fsgs: 'Few-Shot GS',
   guidedvd: 'Guidedvd-3dgs', difix: 'DiFix3D+', gt: 'Ground truth', ours: 'Ours',
@@ -211,16 +192,3 @@ $('#copy-citation').addEventListener('click', async () => {
     $('#copy-status').textContent = 'Citation selected. Press Ctrl+C or ⌘C to copy.';
   }
 });
-
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      $$('.nav-links a').forEach(link => {
-        if (link.hash === `#${entry.target.id}`) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
-      });
-    }
-  }, { rootMargin: '-15% 0px -55% 0px', threshold: 0 });
-  ['overview', 'results', 'method', 'citation'].forEach(id => observer.observe(document.getElementById(id)));
-}

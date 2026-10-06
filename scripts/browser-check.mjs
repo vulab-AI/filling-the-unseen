@@ -13,16 +13,27 @@ const page = await context.newPage();
 const errors = [];
 page.on('pageerror', error => errors.push(error.message));
 page.on('response', response => { if (response.status() >= 400 && response.url().startsWith(url)) errors.push(`${response.status()} ${response.url()}`); });
+async function checkSimplifiedLayout(target) {
+  assert.equal(await target.locator('.site-header, .nav, .teaser, .hero-compare, [data-hero]').count(), 0);
+  assert.equal(await target.locator('.publication-links a:visible').allTextContents().then(labels => labels.map(label => label.trim())).then(labels => labels.join(', ')), 'Paper, Code');
+  assert.equal((await target.locator('.venue').innerText()).trim(), 'ACM MULTIMEDIA 2026');
+  const venueSize = await target.locator('.venue').evaluate(element => parseFloat(getComputedStyle(element).fontSize));
+  assert(venueSize >= 16, `Conference name too small: ${venueSize}px`);
+  assert.deepEqual(await target.locator('body *').evaluateAll(elements => elements
+    .filter(element => element.getClientRects().length && [...element.childNodes].some(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()))
+    .filter(element => getComputedStyle(element).color !== 'rgb(0, 0, 0)')
+    .map(element => ({ tag: element.tagName, text: element.textContent.slice(0, 70), color: getComputedStyle(element).color }))), [], 'All webpage text must be black');
+}
 try {
   await page.goto(url, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   assert.equal(await page.locator('h1').innerText(), 'Filling the Unseen');
+  await checkSimplifiedLayout(page);
+  assert.equal(await page.locator('.venue').evaluate(element => getComputedStyle(element).fontSize), '20px');
   await page.screenshot({ path: resolve(out, 'desktop-top.png') });
-  for (const scene of ['garden', 'indoor', 'bonsai']) {
-    await page.locator(`[data-hero="${scene}"]`).click();
-    await page.waitForFunction(s => document.querySelector('#hero-after').src.endsWith(`teaser-${s}-ours.jpg`), scene);
-  }
-  const slider = page.locator('.hero-compare input');
+  await page.locator('[data-resource="paper"]').hover();
+  await checkSimplifiedLayout(page);
+  const slider = page.locator('.result-compare input');
   await slider.focus();
   await page.keyboard.press('Home');
   assert.equal(await slider.inputValue(), '0');
@@ -30,7 +41,7 @@ try {
   assert.equal(await slider.inputValue(), '100');
   await page.keyboard.press('ArrowLeft');
   assert.equal(await slider.inputValue(), '99');
-  await slider.fill('48');
+  await slider.fill('50');
   for (const scene of ['garden', 'workshop', 'meeting', 'bonsai']) {
     await page.locator(`[data-scene="${scene}"]`).click();
     await page.waitForFunction(() => !document.querySelector('.result-compare').hasAttribute('aria-busy'));
@@ -87,17 +98,17 @@ try {
   const accessibility = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
   await writeFile(resolve(out, 'accessibility.json'), JSON.stringify(accessibility.violations, null, 2));
   assert.deepEqual(accessibility.violations.map(v => ({ id: v.id, nodes: v.nodes.map(n => n.target) })), []);
-  for (const width of [375, 390, 768, 1280]) {
+  for (const width of [320, 375, 390, 768, 1280]) {
     await page.setViewportSize({ width, height: 900 });
     await page.evaluate(() => window.scrollTo(0, 0));
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Horizontal overflow at ${width}px`);
+    await checkSimplifiedLayout(page);
     await page.screenshot({ path: resolve(out, `viewport-${width}.png`), fullPage: true });
   }
   const mobileContext = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce' });
   const mobile = await mobileContext.newPage();
   await mobile.goto(url, { waitUntil: 'networkidle' });
-  await mobile.locator('[data-hero="garden"]').tap();
-  await mobile.waitForFunction(() => document.querySelector('#hero-after').src.includes('garden'));
+  await checkSimplifiedLayout(mobile);
   await mobile.locator('[data-scene="meeting"]').tap();
   await mobile.waitForFunction(() => !document.querySelector('.result-compare').hasAttribute('aria-busy'));
   const bounds = await mobile.locator('.result-compare').boundingBox();
@@ -107,5 +118,5 @@ try {
   await mobile.screenshot({ path: resolve(out, 'mobile-results.png') });
   await mobileContext.close();
   assert.deepEqual(errors, []);
-  console.log('Passed: desktop/mobile layouts, every scene and method, views, sliders, touch, tabs, figure dialog, clipboard, video playback/seeking, and accessibility.');
+  console.log('Passed: simplified header, black text, desktop/mobile layouts, every scene and method, views, sliders, touch, tabs, figure dialog, clipboard, video playback/seeking, and accessibility.');
 } finally { await browser.close(); }

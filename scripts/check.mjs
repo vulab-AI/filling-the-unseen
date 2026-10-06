@@ -4,6 +4,10 @@ import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
+assert(!/<header\b|class="teaser\b|data-hero=|Beyond the observed scene|Drag to reveal|Explore results|RIO DE JANEIRO/.test(html), 'Removed navigation and teaser UI must not return');
+assert(/<p class="venue">ACM MULTIMEDIA 2026<\/p>/.test(html), 'Conference label must not include the location');
+const publicationLinks = html.match(/<div class="publication-links">([\s\S]*?)<\/div>/)[1];
+assert(!/href="#(?:video|results)"/.test(publicationLinks), 'Hero must not show Video or Explore results buttons');
 const siteUrl = html.match(/rel="canonical" href="([^"]+)"/)[1];
 for (const [, url] of html.matchAll(/(?:property="og:image"|name="citation_pdf_url") content="([^"]+)"/g)) {
   assert(url.startsWith(siteUrl), `Metadata points outside this site: ${url}`);
